@@ -8,9 +8,8 @@ const store = {
   }),
 
   chooseColor(color) {
-    if (this.debug) {
+    if (this.debug) 
       console.log('chosen color: ', color)
-    }
 
     this.state.chosenColor = color
   },

@@ -1,10 +1,9 @@
 <template>
-  <canvas id="canvas"
+  <canvas 
+    id="canvas"
     height="350"
     width="750"
   />
-
-  
 </template>
 
 <script>
@@ -17,25 +16,19 @@ export default {
   mounted() {
     const canvas = document.getElementById('canvas');
     const bounds = canvas.getBoundingClientRect();
-
     const canvasContext = canvas.getContext('2d');
-
     const mouse = {x:0, y:0, lastX: null, lastY: null}
     let drawing = false
 
     function draw() {
-      
-
       if (mouse.lastX == null && mouse.lastY == null) {
-        
-        mouse.lastX = mouse.x
-        mouse.lastY = mouse.y
-
         canvasContext.beginPath()
         canvasContext.arc(mouse.x, mouse.y, WEIGHT/1.7, 0 , 2*Math.PI)
         canvasContext.fillStyle = store.state.chosenColor
         canvasContext.fill()
 
+        mouse.lastX = mouse.x
+        mouse.lastY = mouse.y
         return
       }
 
@@ -64,9 +57,14 @@ export default {
     canvas.onmousedown = (e) => {
       if (!store.state.chosenColor) 
         return
-
       drawing = true
+      setMousePosition(e)
+      draw()
+    }
 
+    canvas.onmousemove = (e) => {
+      if(!drawing)
+        return
       setMousePosition(e)
       draw()
     }
@@ -78,19 +76,11 @@ export default {
     }
     canvas.onmouseout = stopDrawing
     canvas.onmouseup = stopDrawing
-
-    canvas.onmousemove = (e) => {
-      if(!drawing)
-        return
-
-      setMousePosition(e)
-      draw()
-    }
   }
 }
 </script>
 
-<style>
+<style lang="scss">
   #canvas {
     margin: 20px 5px;
     border: 0.5px gray solid;

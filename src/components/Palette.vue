@@ -1,7 +1,10 @@
 <template>
   <div id="palette">
     <Color v-for="(c, i) in listColors" :color="c" :key="i"
-      :chosen="sharedState.chosenColor != null && sharedState.chosenColor.toUpperCase() == c.toUpperCase()"
+      :chosen="
+        sharedState.chosenColor != null && 
+        sharedState.chosenColor.toUpperCase() == c.toUpperCase()
+      "
     />
   </div>
 </template>
@@ -19,10 +22,6 @@ export default {
       listColors: ['#FF9AA2', '#FFDAC1', '#F1E3AD', '#E2F0CB', '#B5EAD7', '#C7CEEA'],
       sharedState: store.state
     }
-  },
-  mounted() {
-    console.log('hello', this.sharedState.chosenColor)
-
   }
 }
 </script>
