@@ -1,4 +1,5 @@
 # demo-paint
+Nothing special lol
 
 ## Project setup
 ```

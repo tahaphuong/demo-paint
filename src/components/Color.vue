@@ -20,17 +20,17 @@ export default {
 }
 </script>
 
-<style lang="scss">
+<style>
     .color {
       height: 65px;
       width: 65px;
       background: #c4c4c4;
       border-radius: 15px;
       border: 3px transparent solid;
+    }
 
-      &:hover {
+    .color:hover {
         cursor: pointer;
         opacity: 0.5;
       } 
-    }
 </style>

@@ -14,9 +14,12 @@ const WEIGHT = 1
 export default {
   name: 'Canvas',
   mounted() {
-    const canvas = document.getElementById('canvas');
-    const bounds = canvas.getBoundingClientRect();
-    const canvasContext = canvas.getContext('2d');
+    const canvas = document.getElementById('canvas')
+    const bounds = canvas.getBoundingClientRect()
+    const canvasContext = canvas.getContext('2d')
+    canvasContext.fillStyle = "#ffffff"
+    canvasContext.fillRect(0, 0, canvas.width, canvas.height)
+
     const mouse = {x:0, y:0, lastX: null, lastY: null}
     let drawing = false
 
@@ -80,7 +83,7 @@ export default {
 }
 </script>
 
-<style lang="scss">
+<style>
   #canvas {
     margin: 20px 5px;
     border: 0.5px gray solid;
