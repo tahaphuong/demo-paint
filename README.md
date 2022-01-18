@@ -2,6 +2,7 @@
 A pad on which you can draw anythingg! 🎨
 Nothing special 🥨
 Site: https://vue-paint.netlify.app/
+<img src="./screen.png" width="500"/>
 
 ## Project setup
 ```
