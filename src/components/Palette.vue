@@ -26,7 +26,7 @@ export default {
 }
 </script>
 
-<style lang="scss">
+<style>
   #palette {
     height: 100%;
     display: flex;

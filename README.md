@@ -1,4 +1,7 @@
 # demo-paint
+A pad on which you can draw anythingg! 🎨
+Nothing special 🥨
+Site: https://vue-paint.netlify.app/
 
 ## Project setup
 ```

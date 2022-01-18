@@ -80,7 +80,7 @@ export default {
 }
 </script>
 
-<style lang="scss">
+<style>
   #canvas {
     margin: 20px 5px;
     border: 0.5px gray solid;

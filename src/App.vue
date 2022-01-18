@@ -23,7 +23,7 @@ export default {
 }
 </script>
 
-<style lang="scss">
+<style>
 
 html, body {
   margin: 0;
